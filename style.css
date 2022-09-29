@@ -1,0 +1,178 @@
+
+/* Reset de documento */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*Variables*/
+
+:root{
+    --primary-color:#141C2F;
+    --secondary-color:#1F2A48;
+    --links-color:#265fb0;
+    --boton-color:#0079FF;
+    --white-color:#FFFFFF;
+    --font-size:.7rem;
+
+}
+
+
+.box{
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 500px;
+    
+}
+.form{
+    display:grid;
+    grid-template-columns: 1fr 6fr 2fr;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 75px;
+    align-items: center;
+    justify-items: center;
+    padding:0 20px;
+    border-radius: 10px;
+}
+.buscador-lupa{
+    width: 30px;
+    filter: invert(20%) sepia(84%) saturate(2662%) hue-rotate(202deg) brightness(90%) contrast(89%);
+    height: 40%;
+    background-color:transparent;
+}
+.header__input{
+    background-color:transparent;
+    border:none;
+    width: 100%;
+    height: 60%;
+    color: var(--white-color);
+}
+
+.btn-search{
+    width: 75%;
+    height: 50%;
+    background-color:var(--boton-color);
+    color: var(--white-color);
+    border:none;
+    border-radius: 8px;
+    padding: 10px ;
+}
+.main{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    margin-top:auto ;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+.main-imagen{
+    display: flex;
+    justify-content: center;
+}
+.avatar{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main-content{
+    display: grid;
+    color: azure;
+    width: 100%;
+    padding: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr 1.5fr 1fr 2fr;
+    grid-template-areas:
+    "img perfil fecha"
+    ". description description"
+    ". info info"
+    ". address links"
+    ;
+}
+
+.wait{
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+
+}
+.perfil{
+    grid-area: perfil;
+    display: flex;
+    flex-direction: column; 
+    font-size: 12px;  
+    gap: 30px;
+
+}
+.description{
+    grid-area: description;
+    text-align: justify;
+    font-size: var(--font-size);
+}
+.link-perfil{
+    color:var(--links-color);
+    text-decoration: none;
+    font-size: .7rem;
+}
+.fecha{
+    grid-area: fecha;
+    text-align: end;
+    font-size: var(--font-size);
+}
+.info{
+    grid-area: info;
+    border-radius: 8px;
+    
+}
+.address{
+    grid-area: address;
+    justify-content: center;
+}
+.links{
+    grid-area: links;
+    justify-content: center;
+    
+}
+.info{
+    background-color: var(--primary-color);
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    font-size: .9rem;
+    font-weight: bolder;
+}
+.icono{
+    width: 20px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(251deg) brightness(102%) contrast(103%);
+}
+
+.address, .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+}
+
+.address a,
+.links a{
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: var(--font-size);
+}
+
+@media screnn and(width:768px){
+
+}
