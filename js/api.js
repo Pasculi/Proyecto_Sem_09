@@ -6,7 +6,7 @@ const form = document.querySelector('.form');
 const input = document.querySelector('.header__input');
 form.addEventListener('submit', (event)=>{
   event.preventDefault()
-  const username = input.value
+  const username = input.value.trim()
   getUser(username)
   
 
@@ -32,7 +32,9 @@ async function getUser(username){
 
 function showUser(data){
   const {avatar_url,name, created_at,login,bio,public_repos,followers, following,location, blog,twitter_username,company,html_url } = data
+
   console.log(avatar_url,name, created_at,login,bio,public_repos,followers, following,location, blog,twitter_username,company)
+
   const UsuarioDatos = `
   
   <div class="main-imagen">
